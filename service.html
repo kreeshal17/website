@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .service {
+            margin-bottom: 40px;
+        }
+
+        .service h2 {
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .service-description.expanded {
+            max-height: none;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .read-more-btn:hover {
+            background-color: #555;
+        }
+
+        .service-description ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .service-description li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Our Services</h1>
+        <nav>
+            <a href="#website">Website Creation</a>
+            <a href="#video">Video Creation</a>
+        </nav>
+    </header>
+
+    <section id="website" class="service">
+        <h2>Website Creation</h2>
+        <div class="service-description">
+            <p>We specialize in creating stunning and functional websites tailored to your needs. Whether you're an
+                individual, small business, or corporation, we can help bring your online presence to life. Our team of
+                experienced developers and designers work closely with clients to understand their vision and deliver
+                custom solutions that exceed expectations.</p>
+            <p>If you're looking to establish a strong online presence, showcase your products or services, or improve
+                user engagement, we've got you covered. From simple static websites to dynamic e-commerce platforms, we
+                have the expertise to handle projects of any scale.</p>
+            <p>With our comprehensive website creation services, you can expect:</p>
+            <ul>
+                <li>Customized website designs</li>
+                <li>Responsive layouts for mobile compatibility</li>
+                <li>User-friendly navigation and interface</li>
+                <li>Integration of essential features and functionalities</li>
+                <li>SEO optimization for improved visibility</li>
+                <li>Ongoing support and maintenance</li>
+            </ul>
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+    </section>
+
+    <section id="video" class="service">
+        <h2>Video Creation</h2>
+        <div class="service-description">
+            <p>Our video creation services are designed to help you tell your story, promote your brand, and engage your
+                audience through compelling visual content. Whether you need a promotional video, explainer video, or
+                social media content, our team of skilled videographers and editors can bring your ideas to life.</p>
+            <p>We understand the importance of storytelling and visual communication in today's digital world. That's
+                why we work closely with our clients to conceptualize, script, shoot, and edit videos that resonate with
+                their target audience.</p>
+            <p>With our video creation services, you can expect:</p>
+            <ul>
+                <li>Professional video production from start to finish</li>
+                <li>High-quality footage captured with state-of-the-art equipment</li>
+                <li>Creative editing and post-production effects</li>
+                <li>Customized content tailored to your brand and objectives</li>
+                <li>Timely delivery and seamless collaboration</li>
+                <li>Option for voiceover, music, and sound effects</li>
+            </ul>
+        </div>
+        <button class="read-more-btn" onclick="toggleDescription(this)">Read More</button>
+    </section>
+
+    <script>
+        function toggleDescription(btn) {
+            var description = btn.previousElementSibling;
+            description.classList.toggle('expanded');
+            if (btn.innerText === 'Read More') {
+                btn.innerText = 'Read Less';
+            } else {
+                btn.innerText = 'Read More';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

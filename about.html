@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #333;
+        }
+
+        .photo-container {
+            max-width: 200px; /* Adjusted image size */
+            margin: 0 auto;
+            border: 2px solid #333;
+            border-radius: 50%;
+            overflow: hidden; /* Ensure image stays within container */
+        }
+
+        .photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+            padding: 0 20px;
+            text-align: justify;
+            animation: text-animation 1s infinite alternate;
+        }
+
+        .description::first-letter {
+            font-size: 24px;
+            color: #333;
+            float: left;
+            margin-right: 5px;
+        }
+
+        @keyframes text-animation {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .popup {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            animation: popup-animation 3s;
+            z-index: 999;
+        }
+
+        @keyframes popup-animation {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <a href="#childhood">Childhood</a>
+            <a href="#school">School</a>
+            <a href="#college">College</a>
+            <a href="#university">University</a>
+        </nav>
+    </header>
+
+    <section id="childhood">
+        <h2 class="section-title">Childhood</h2>
+        <div class="photo-container">
+            <img class="photo" src="childhood.jpg" alt="Childhood Photo">
+        </div>
+        <p class="description">During my childhood, I was a child full of curiosity, spending my time learning about new things and
+            technology. I was somewhat introverted, often finding solace in books, immersing myself in their pages to
+            explore new worlds and ideas.</p>
+    </section>
+
+    <section id="school">
+        <h2 class="section-title">School</h2>
+        <div class="photo-container">
+            <img class="photo" src="school.jpg" alt="School Photo">
+        </div>
+        <p class="description">My 12-year journey at Sunshine School has been enriching and transformative. With its emphasis on academic
+            excellence and nurturing environment, Sunshine has provided me with a strong foundation for learning and
+            personal growth. I'm grateful for the supportive community of teachers and peers who have contributed to my
+            success, and I cherish the invaluable memories and lessons learned during my time there.</p>
+        <!-- Optional link -->
+        <!-- <a href="school_website_url">School Website</a> -->
+    </section>
+
+    <section id="college">
+        <h2 class="section-title">College</h2>
+        <div class="photo-container">
+            <img class="photo" src="college.jpg" alt="College Photo">
+        </div>
+        <p class="description">During my college years at CCRC, one of Nepal's prestigious institutions renowned for its excellence in
+            education and outstanding alumni network, I was provided with unparalleled opportunities to enhance my
+            knowledge and skills. CCRC's reputation for producing top-notch graduates, coupled with its impressive
+            ranking by the Institute of Engineering (IOE), solidified my decision to pursue my education there. Immersed
+            in a dynamic learning environment, I seized every opportunity to engage with challenging coursework,
+            participate in enriching extracurricular activities, and collaborate with driven peers. My time at CCRC not
+            only broadened my academic horizons but also fostered personal growth, preparing me for the diverse
+            challenges of the future.</p>
+        <!-- Optional link -->
+        <!-- <a href="college_website_url">College Website</a> -->
+    </section>
+
+    <section id="university">
+        <h2 class="section-title">University</h2>
+        <div class="photo-container">
+            <img class="photo" src="university.jpg" alt="University Photo">
+        </div>
+        <p class="description">As a Jain student at Jain University, my academic journey has been enriched in numerous ways. The
+            university's commitment to holistic education has provided me with a supportive environment where I've been
+            able to thrive both academically and personally. Through its diverse range of programs and extracurricular
+            activities, I've had the opportunity to explore my interests and passions, gaining valuable knowledge and
+            skills along the way.
+
+            One of the most significant ways Jain University has helped me is by fostering a sense of community and
+            belonging. As a member of the Jain student body, I've found camaraderie among peers who share similar values
+            and beliefs. This sense of unity has not only enhanced my academic experience but has also provided me with
+            a strong support system that has been invaluable throughout my journey..</p>
+        <!-- Optional link -->
+        <!-- <a href="university_website_url">University Website</a> -->
+    </section>
+
+    <div class="popup">
+        <p>Thank you for visiting this page!</p>
+    </div>
+
+    <script>
+        // Hide popup after 3 seconds
+        setTimeout(function () {
+            document.querySelector('.popup').style.display = 'none';
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
