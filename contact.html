@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,34 +95,45 @@
             width: 32px;
             height: 32px;
         }
+
+        /* Media Query for Responsive Design */
+        @media only screen and (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 10px;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Contact Me</h1>
-        <nav>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>Contact Me</h1>
+    <nav>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <form action="mailto:krishalkarna@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required><br>
-                <input type="text" name="email" placeholder="Your Email" required><br>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br>
-                <input type="submit" value="Send Message">
-            </form>
-        </div>
-        <div class="social-links">
-            <a href="https://www.facebook.com/krishalkarna17"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
-            <a href="https://twitter.com/krishal7"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
-        </div>
-    </section>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+        <form action="mailto:krishalkarna@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="text" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+    <div class="social-links">
+        <a href="https://www.facebook.com/krishalkarna17"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+        <a href="https://twitter.com/krishal7"><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter"></a>
+    </div>
+</section>
 
 </body>
-
 </html>
